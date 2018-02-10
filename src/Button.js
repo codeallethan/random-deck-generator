@@ -1,11 +1,12 @@
 import React from 'react';
-import Button from 'material-ui/Button'
+import {Button} from "semantic-ui-react";
 
 
-export const GenerateBtn = (props) => {
-        const {onClick} = props
+export const ButtonComp = (props) => {
+        const {onClick, icon} = props
 
         return(
-        <Button onClick={onClick} type={'submit'} color={'primary'} raised>{props.children}</Button>
+        <Button onClick={onClick} content={props.children} icon={icon} labelPosition={'left'}/>
         )
 }
+
