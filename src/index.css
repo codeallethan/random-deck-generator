@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
 }
 
-img {
-  width: 100px;
+.noDistances {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }

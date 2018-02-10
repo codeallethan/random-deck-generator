@@ -16,6 +16,5 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-flexbox-grid": "^2.0.0"
   }
 }
