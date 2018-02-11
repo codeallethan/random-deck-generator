@@ -9,3 +9,20 @@ body {
   padding: 0 !important;
   border: 0 !important;
 }
+
+.footer {
+  background-color: black;
+  color: white;
+  border-top: solid #558CED 5px;
+}
+
+.header-class {
+  background-color: #558CED;
+  color: white;
+  border-bottom: solid #558CED 3px;
+  margin-bottom: 10px;
+}
+
+.content {
+  background-color: #F0F2F2;
+}
