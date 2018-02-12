@@ -52,10 +52,9 @@ class App extends Component {
                                                                      altName={this.state.cards[7].alt}/></Grid.Column>
                     </Grid.Row>
                 </Grid>
-
                 <ButtonComp icon={'random'} onClick={this.onClickHandler.bind(this)}>Generate</ButtonComp>
                 <a href={`https://link.clashroyale.com/deck/en?deck=${this.state.cards[0].link};${this.state.cards[1].link};${this.state.cards[2].link};${this.state.cards[3].link};${this.state.cards[4].link};${this.state.cards[5].link};${this.state.cards[6].link};${this.state.cards[7].link}`}>
-                    <ButtonComp icon={'upload'}>Push to Deck</ButtonComp></a>
+                    <ButtonComp labelPosition={'right'} icon={'upload'}>Push to Deck</ButtonComp></a>
                 </div>
                 <Footer/>
             </div>
