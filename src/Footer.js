@@ -34,14 +34,9 @@ export const Footer = props => {
             from www.flaticon.com
           </Grid.Column>
           <Grid.Column width={3}>
-            <Icon className={'.icon'} inverted size={'big'} name={'github'} />
-            <Icon inverted className={'.icon'} size={'big'} name={'twitter'} />
-            <Icon
-              inverted
-              className={'.icon'}
-              size={'big'}
-              name={'instagram'}
-            />
+            <a href={'https://github.com/nerdysteve'} target={'_blank'}>
+              <Icon className={'.icon'} inverted size={'big'} name={'github'} />
+            </a>
           </Grid.Column>
         </Grid.Row>
       </Grid>
