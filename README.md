@@ -1,4 +1,4 @@
-# [Random Deck Generator](https://nerdysteve.github.io/random-deck-generator)
+# [Random Deck Generator](https://nerdysteve.github.io/random-deck-generator/)
 
 A Random Deck Generator for Clash Royale. Visit the [Generator](https://nerdysteve.github.io/random-deck-generator/) on your Smartphone, generate a deck and copy it directly into the Game.
 
