@@ -76,6 +76,10 @@ import witch from './static/imgs/witch.png';
 import wizard from './static/imgs/wizard.png';
 import xBow from './static/imgs/x-bow.png';
 import zap from './static/imgs/zap.png';
+import hunter from './static/imgs/hunter.png';
+import magicArcher from './static/imgs/magic_archer.png';
+import royalGhost from './static/imgs/royal_ghost.png';
+import zappies from './static/imgs/zappies.png';
 
 export const CardList = [
   { name: 'Archers', img: archers, link: '26000001' },
@@ -115,6 +119,7 @@ export const CardList = [
   { name: 'Guards', img: guards, link: '26000025' },
   { name: 'Heal', img: heal, link: '28000016' },
   { name: 'HogRider', img: hogRider, link: '26000021' },
+  { name: 'Hunter', img: hunter, link: '26000044' },
   { name: 'IceGolem', img: iceGolem, link: '26000038' },
   { name: 'IceSpirit', img: iceSpirit, link: '26000030' },
   { name: 'IceWizard', img: iceWizard, link: '26000023' },
@@ -155,5 +160,8 @@ export const CardList = [
   { name: 'Witch', img: witch, link: '26000007' },
   { name: 'Wizard', img: wizard, link: '26000017' },
   { name: 'XBow', img: xBow, link: '27000008' },
-  { name: 'Zap', img: zap, link: '28000008' }
+  { name: 'Zap', img: zap, link: '28000008' },
+  { name: 'Magic Archer', img: magicArcher, link: '' }, //TODO link: 26000051?
+  { name: 'Royal Ghost', img: royalGhost, link: '26000050' },
+  { name: 'Zappies', img: zappies, link: '26000052' }
 ];
