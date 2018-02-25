@@ -24,7 +24,7 @@ export const Footer = props => {
               </a>
             </p>
             <Divider />
-            Icon (Dice) made by{' '}
+            Icon (Dice) made by
             <a
               href={'https://www.flaticon.com/authors/dimi-kazak'}
               target={'_blank'}
