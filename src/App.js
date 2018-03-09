@@ -3,9 +3,10 @@ import './App.css';
 import { selectRandomCards } from './Generate';
 import { Card } from './Card';
 import { ButtonComp } from './Button';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Image, Modal } from 'semantic-ui-react';
 import { Footer } from './Footer';
 import { HeaderComp } from './Header';
+import { CardList } from './CardList';
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,31 @@ class App extends Component {
     this.setState({
       cards: selectRandomCards()
     });
+  };
+
+  renderModal = () => {
+    const cardList = CardList.map((i, index) => (
+      <Image size={'tiny'} key={index} src={i.img} alt={i.alt} />
+    ));
+    const trigger = (
+      <ButtonComp className={'btn-settings'} icon={'settings'}>
+        Options
+      </ButtonComp>
+    );
+
+    return (
+      <Modal className={'modal-container'} trigger={trigger}>
+        <Modal.Header>Include / Exclude Cards</Modal.Header>
+        <Modal.Content>
+          <div className={'modal-content-container'}>
+            <div className={'modal-content-left'}>{cardList}</div>
+
+            <div className={'modal-content-right'}>{cardList}</div>
+          </div>
+        </Modal.Content>
+        <Modal.Description>Description</Modal.Description>
+      </Modal>
+    );
   };
 
   render() {
@@ -101,6 +127,8 @@ class App extends Component {
               Push to Deck
             </ButtonComp>
           </a>
+
+          {this.renderModal()}
         </div>
         <Footer />
       </div>

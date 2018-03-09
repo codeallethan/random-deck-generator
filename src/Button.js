@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 
 export const ButtonComp = props => {
-  const { onClick, icon, labelPosition = 'left' } = props;
+  const { onClick, icon, labelPosition = 'left', className } = props;
 
   return (
     <Button
@@ -13,6 +13,7 @@ export const ButtonComp = props => {
       content={props.children}
       icon={icon}
       labelPosition={labelPosition}
+      className={className}
     />
   );
 };
