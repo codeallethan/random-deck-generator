@@ -25,7 +25,12 @@ class App extends Component {
 
   renderModal = () => {
     const cardList = CardList.map((i, index) => (
-      <Image size={'tiny'} key={index} src={i.img} alt={i.alt} />
+      <Image
+        className={'card-option-image'}
+        key={index}
+        src={i.img}
+        alt={i.alt}
+      />
     ));
     const trigger = (
       <ButtonComp className={'btn-settings'} icon={'settings'}>
