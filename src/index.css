@@ -67,6 +67,7 @@ body {
 
 .card-option-image {
   width: 60px;
+  cursor: pointer;
 }
 
 .checkbox-image {

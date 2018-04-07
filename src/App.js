@@ -32,16 +32,23 @@ class App extends Component {
         })
       });
     } else {
-      this.setState({
-        includedCards: [...this.state.includedCards, card]
-      });
+      if (this.state.includedCards.length < 8) {
+        this.setState({
+          includedCards: [...this.state.includedCards, card]
+        });
+      }
     }
   };
 
   renderModal = () => {
     const cardList = CardList.map((i, index) => (
       <div className={'container-img'} key={index}>
-        <Image className={'card-option-image'} src={i.img} alt={i.alt} />
+        <Image
+          className={'card-option-image'}
+          src={i.img}
+          alt={i.alt}
+          onClick={() => this.checkboxHandler(i)}
+        />
         <Checkbox
           className={'checkbox-image'}
           disabled={
@@ -49,7 +56,7 @@ class App extends Component {
               ? this.state.includedCards.indexOf(i) === -1
               : false
           }
-          onClick={() => this.checkboxHandler(i)}
+          onChange={() => this.checkboxHandler(i)}
           checked={this.state.includedCards.indexOf(i) !== -1}
         />
       </div>
