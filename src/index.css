@@ -68,3 +68,14 @@ body {
 .card-option-image {
   width: 60px;
 }
+
+.checkbox-image {
+  position: absolute !important;
+  top: 4px;
+  right: 5px;
+}
+
+.container-img {
+  position: relative;
+  width: 60px;
+}

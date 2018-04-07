@@ -3,7 +3,7 @@ import './App.css';
 import { selectRandomCards } from './Generate';
 import { Card } from './Card';
 import { ButtonComp } from './Button';
-import { Grid, Image, Modal } from 'semantic-ui-react';
+import { Grid, Image, Modal, Checkbox } from 'semantic-ui-react';
 import { Footer } from './Footer';
 import { HeaderComp } from './Header';
 import { CardList } from './CardList';
@@ -13,7 +13,8 @@ class App extends Component {
     super();
 
     this.state = {
-      cards: selectRandomCards()
+      cards: selectRandomCards(),
+      includedCards: []
     };
   }
 
@@ -23,14 +24,35 @@ class App extends Component {
     });
   };
 
+  checkboxHandler = card => {
+    if (this.state.includedCards.indexOf(card) !== -1) {
+      this.setState({
+        includedCards: this.state.includedCards.filter(el => {
+          return el !== card;
+        })
+      });
+    } else {
+      this.setState({
+        includedCards: [...this.state.includedCards, card]
+      });
+    }
+  };
+
   renderModal = () => {
     const cardList = CardList.map((i, index) => (
-      <Image
-        className={'card-option-image'}
-        key={index}
-        src={i.img}
-        alt={i.alt}
-      />
+      <div className={'container-img'} key={index}>
+        <Image className={'card-option-image'} src={i.img} alt={i.alt} />
+        <Checkbox
+          className={'checkbox-image'}
+          disabled={
+            this.state.includedCards.length >= 8
+              ? this.state.includedCards.indexOf(i) === -1
+              : false
+          }
+          onClick={() => this.checkboxHandler(i)}
+          checked={this.state.includedCards.indexOf(i) !== -1}
+        />
+      </div>
     ));
     const trigger = (
       <ButtonComp className={'btn-settings'} icon={'settings'}>
